@@ -1,4 +1,3 @@
 #!/bin/bash
 docker compose up -d
-exec docker compose exec nvim
-
+exec docker compose exec -it app nvim /root/examples/cpp/circular_buffer.cpp

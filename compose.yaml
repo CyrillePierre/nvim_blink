@@ -1,11 +1,11 @@
 services:
-  tirrex:
+  app:
     build:
       context: ./
       network: host
     image: nvim_blink
+    network_mode: host
     volumes:
       - ./config:/root/.config/nvim
       - ./examples:/root/examples
-    command: nvim
-
+    command: sleep infinity
