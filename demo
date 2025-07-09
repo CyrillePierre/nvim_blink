@@ -1,0 +1,4 @@
+#!/bin/bash
+docker compose up -d
+exec docker compose exec nvim
+

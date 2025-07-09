@@ -1,0 +1,11 @@
+services:
+  tirrex:
+    build:
+      context: ./
+      network: host
+    image: nvim_blink
+    volumes:
+      - ./config:/root/.config/nvim
+      - ./examples:/root/examples
+    command: nvim
+
