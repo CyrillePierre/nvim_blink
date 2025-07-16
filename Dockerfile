@@ -16,3 +16,10 @@ RUN cd /tmp && \
     make install && \
     cd .. && \
     rm -rf neovim
+
+# install dependencies for musicbotd and others
+RUN --mount=type=cache,target=/var/lib/apt/lists \
+    apt-get update && \
+    apt-get install -y --no-install-recommends \
+      libcurl3-gnutls-dev libmpv-dev && \
+    rm -rf /var/lib/apt/lists/*
