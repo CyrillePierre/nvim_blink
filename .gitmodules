@@ -1,0 +1,3 @@
+[submodule "examples/musicbotd"]
+	path = examples/musicbotd
+	url = https://git.eseris.fr/musicbot/musicbotd.git

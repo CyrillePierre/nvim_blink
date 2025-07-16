@@ -5,8 +5,9 @@ services:
       network: host
     image: nvim_blink
     network_mode: host
-    stop_signal: SIGINT
+    stop_signal: SIGKILL
     volumes:
       - ./config:/root/.config/nvim
       - ./examples:/root/examples
-    command: sleep infinity
+    working_dir: /root/examples
+    command: tail -f /dev/null
